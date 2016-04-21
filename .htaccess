@@ -1,0 +1,12 @@
+#LIVE PRODUCTION SERVER HTACCESS
+#Options +FollowSymLinks
+#RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule .* /index.php/$0 [PT,L]  
+
+#DEV HTACCESS
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L] 
